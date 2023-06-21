@@ -11,7 +11,7 @@ const MapContainer = (props: MapContainerProps) => {
   return (
     <Map
       ref={mapRef}
-      className="map-continer"
+      className="map-continer h-full w-full absolute"
       center={[51.505, -0.09]}
       zoom={16}
       scrollWheelZoom={true}

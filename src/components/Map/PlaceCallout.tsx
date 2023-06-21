@@ -1,5 +1,5 @@
 import { Place } from "../../models/Place";
-import ReportIcon from "../../assets/warning_FILL0_wght400_GRAD0_opsz24.svg";
+import ReportIcon from "./../../assets/warning_FILL0_wght400_GRAD0_opsz24.svg";
 
 export type PlaceCalloutProps = {
   place: Place;

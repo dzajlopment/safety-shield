@@ -2,6 +2,7 @@ import { Sign } from "../../models/Sign";
 
 export type SignCalloutProps = {
   signs: Sign[];
+  className?: string;
   onClick?: () => void;
 };
 
@@ -12,7 +13,7 @@ const SignCallout = (props: SignCalloutProps) => {
 
   return (
     <div
-      className="flex gap-2 px-3 py-3 bg-white rounded-full flex-wrap w-max mx-auto overflow-hidden pointer-events-auto"
+      className={`flex gap-2 px-3 py-3 bg-white rounded-full flex-wrap w-max mx-auto overflow-hidden pointer-events-auto ${props.className}`}
       onClick={handleCalloutClicked}
     >
       {props.signs.map((sign) => (

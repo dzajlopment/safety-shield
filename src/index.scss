@@ -2,15 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
+#root {
+  height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-#root {
-  min-height: 100vh;
-  display: flex;
 }
 
 body {
@@ -18,10 +19,10 @@ body {
   margin: 0;
 }
 
-@layer components {
-  .map {
-    &-continer {
-      @apply flex-1;
-    }
-  }
-}
+// @layer components {
+//   .map {
+//     &-continer {
+//       @apply flex-1;
+//     }
+//   }
+// }
