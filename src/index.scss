@@ -10,6 +10,7 @@
 
 #root {
   min-height: 100vh;
+  display: flex;
 }
 
 body {
@@ -20,7 +21,7 @@ body {
 @layer components {
   .map {
     &-continer {
-      @apply w-[100vh] h-[100vh];
+      @apply flex-1;
     }
   }
 }
