@@ -1,7 +1,8 @@
 import { useRef } from "react";
-import { MapContainer as Map, TileLayer } from "react-leaflet";
+import { MapContainer as Map, TileLayer, Polygon } from "react-leaflet";
 import MapPoints from "./MapPoints";
 import { TPoint } from "../../types/TPoint";
+import MapZones from "./MapZones";
 
 export type MapContainerProps = {
   children?: React.ReactNode;
@@ -28,6 +29,7 @@ const MapContainer = (props: MapContainerProps) => {
         selectedPoint={props.selectedPoint}
         setSelectedPoint={props.setSelectedPoint}
       />
+      <MapZones />
     </Map>
   );
 };
