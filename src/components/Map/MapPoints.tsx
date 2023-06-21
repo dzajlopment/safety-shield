@@ -10,6 +10,15 @@ const DUMMY_DATA: TPoint[] = [
     description: "XDDD",
     name: "Maszyna 1",
     type: "Device",
+    zone: "Las",
+  },
+  {
+    _id: "xxdd",
+    cordinates: [51.6, -0.02],
+    description: "Bruh1",
+    name: "Maszyna 2",
+    type: "Device",
+    zone: "Biuro",
   },
 ];
 
@@ -42,6 +51,7 @@ const MapPoints = (props: MapPointsProps) => {
           type={point.type}
           description={point.description}
           name={point.name}
+          zone={point.zone}
           selectedPoint={props.selectedPoint}
           setSelectedPoint={props.setSelectedPoint}
         />

@@ -17,10 +17,12 @@ const MapScreen = () => {
         <SignCallout
           signs={[{ code: "zzo-1" }, { code: "zzo-2" }, { code: "zzo-3" }]}
         />
-        <PlaceCallout
-          place={{ name: "Wyjście ewakuacyjne", zone: "biura" }}
-          distanceInMeters={152}
-        />
+        {selectedPoint && (
+          <PlaceCallout
+            place={{ name: selectedPoint?.name, zone: selectedPoint?.zone }}
+            distanceInMeters={152}
+          />
+        )}
       </div>
     </div>
   );

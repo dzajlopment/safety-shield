@@ -8,12 +8,11 @@ export type MapPointProps = {
   name: string;
   description: string;
   selectedPoint: TPoint | null;
+  zone: string;
   setSelectedPoint: (value: TPoint | null) => void;
 };
 
 const MapPoint = (props: MapPointProps) => {
-  console.log(props);
-
   return (
     <Marker
       position={props.position}
@@ -25,6 +24,8 @@ const MapPoint = (props: MapPointProps) => {
             description: props.description,
             name: props.name,
             type: props.type,
+
+            zone: props.zone,
           });
         },
       }}

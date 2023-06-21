@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Place } from "../../models/Place";
 import ReportIcon from "./../../assets/warning_FILL0_wght400_GRAD0_opsz24.svg";
 
@@ -11,6 +12,10 @@ const PlaceCallout = (props: PlaceCalloutProps) => {
   const handleReportClick = () => {
     props.onReportClick?.();
   };
+
+  useEffect(() => {
+    // animacja
+  }, []);
 
   return (
     <div className="flex w-full bg-white items-center p-6 rounded-t-[2em] pointer-events-auto">

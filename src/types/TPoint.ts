@@ -4,4 +4,5 @@ export type TPoint = {
   description: string;
   cordinates: [number, number];
   type: string;
+  zone: string;
 };
