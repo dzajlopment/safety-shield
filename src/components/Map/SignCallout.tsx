@@ -10,14 +10,14 @@ const SignCallout = (props: SignCalloutProps) => {
 
   return (
     <div
-      className="flex gap-2 p-2 bg-white rounded-full flex-wrap w-max mx-auto"
+      className="flex gap-2 px-3 py-3 bg-white rounded-full flex-wrap w-max mx-auto overflow-hidden"
       onClick={handleCalloutClicked}
     >
       {props.signs.map((sign) => (
         <img
           key={sign.code}
           src={`/signs/${sign.code}.png`}
-          className="w-10 h-10 object-cover"
+          className="w-16 h-16 object-cover"
         />
       ))}
     </div>
