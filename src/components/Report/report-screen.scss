@@ -1,0 +1,16 @@
+.report-form {
+  label,
+  input, 
+  select {
+    display: block;
+  }
+
+  label {
+    @apply pb-2 text-lg;
+  }
+
+  input,
+  select {
+    @apply bg-yellow-100 p-3 rounded-t-xl mb-2 border-b-2 border-yellow-400;
+  }
+}
