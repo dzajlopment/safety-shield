@@ -3,25 +3,6 @@ import { fetcher } from "../../util/fetcher";
 import { TPoint } from "../../types/TPoint";
 import MapPoint from "./MapPoint";
 
-const DUMMY_DATA: TPoint[] = [
-  {
-    _id: "xsda",
-    cordinates: [51.505, -0.09],
-    description: "XDDD",
-    name: "Maszyna 1",
-    type: "Device",
-    zone: "Las",
-  },
-  {
-    _id: "xxdd",
-    cordinates: [51.6, -0.02],
-    description: "Bruh1",
-    name: "Maszyna 2",
-    type: "Device",
-    zone: "Biuro",
-  },
-];
-
 export type MapPointsProps = {
   selectedPoint: TPoint | null;
   setSelectedPoint: (value: TPoint | null) => void;
@@ -33,8 +14,6 @@ const MapPoints = (props: MapPointsProps) => {
     fetcher
   );
 
-  console.log(data);
-
   if (error) {
     return <></>;
   }
@@ -44,7 +23,6 @@ const MapPoints = (props: MapPointsProps) => {
   }
 
   const points: TPoint[] = data;
-  // const points: TPoint[] = DUMMY_DATA;
 
   return (
     <>
@@ -52,7 +30,7 @@ const MapPoints = (props: MapPointsProps) => {
         <MapPoint
           id={point._id}
           key={point._id}
-          position={point.cordinates}
+          position={point.coordinates}
           type={point.type}
           description={point.description}
           name={point.name}

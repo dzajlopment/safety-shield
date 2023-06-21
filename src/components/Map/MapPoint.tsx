@@ -13,6 +13,10 @@ export type MapPointProps = {
 };
 
 const MapPoint = (props: MapPointProps) => {
+  if (!props?.position) {
+    return <></>;
+  }
+
   return (
     <Marker
       position={props.position}
@@ -20,7 +24,7 @@ const MapPoint = (props: MapPointProps) => {
         click: () => {
           props.setSelectedPoint({
             _id: props.id,
-            cordinates: props.position,
+            coordinates: props.position,
             description: props.description,
             name: props.name,
             type: props.type,

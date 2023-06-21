@@ -2,7 +2,7 @@ export type TPoint = {
   _id: string;
   name: string;
   description: string;
-  cordinates: [number, number];
+  coordinates: [number, number];
   type: string;
   zone: string;
 };
