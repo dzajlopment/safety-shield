@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+@layer components {
+  .map {
+    &-continer {
+      @apply w-[100vh] h-[100vh];
+    }
+  }
+}
