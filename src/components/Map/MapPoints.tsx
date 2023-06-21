@@ -28,18 +28,23 @@ export type MapPointsProps = {
 };
 
 const MapPoints = (props: MapPointsProps) => {
-  // const { data, error } = useSWR("API ENDOPOINT", fetcher);
+  const { data, error } = useSWR(
+    "http://192.168.1.81:3000/api/device",
+    fetcher
+  );
 
-  // if (error) {
-  //   return <></>;
-  // }
+  console.log(data);
 
-  // if (!data) {
-  //   return <></>;
-  // }
+  if (error) {
+    return <></>;
+  }
 
-  // const points: TPoint[] = data;
-  const points: TPoint[] = DUMMY_DATA;
+  if (!data) {
+    return <></>;
+  }
+
+  const points: TPoint[] = data;
+  // const points: TPoint[] = DUMMY_DATA;
 
   return (
     <>
