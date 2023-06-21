@@ -7,8 +7,8 @@ import { TPoint } from "../../types/TPoint";
 export type ReportScreenProps = {
   place: TPoint;
   distanceInMeters: number;
-  onCancel?: () => {};
-  onSubmit?: (report: Omit<Report, "id">) => {};
+  onCancel?: () => void;
+  onSubmit?: (report: Omit<Report, "id">) => void;
 };
 
 const ReportScreen = (props: ReportScreenProps) => {
@@ -27,7 +27,7 @@ const ReportScreen = (props: ReportScreenProps) => {
   };
 
   return (
-    <div className="absolute top-0 left-0 w-full h-full overflow-y-scroll p-6 box-border">
+    <div className="absolute top-0 left-0 w-full h-full overflow-y-scroll p-6 box-border bg-white z-[99999]">
       <div className="flex mb-3 pb-3 border-b border-b-neutral-200">
         <div className="grow">
           <h1 className="text-xl font-bold">{props.place.name}</h1>
