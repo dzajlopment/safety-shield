@@ -6,11 +6,13 @@ export type SignCalloutProps = {
 };
 
 const SignCallout = (props: SignCalloutProps) => {
-  const handleCalloutClicked = () => props.onClick?.();
+  const handleCalloutClicked = () => {
+    props.onClick?.();
+  };
 
   return (
     <div
-      className="flex gap-2 px-3 py-3 bg-white rounded-full flex-wrap w-max mx-auto overflow-hidden"
+      className="flex gap-2 px-3 py-3 bg-white rounded-full flex-wrap w-max mx-auto overflow-hidden pointer-events-auto"
       onClick={handleCalloutClicked}
     >
       {props.signs.map((sign) => (
