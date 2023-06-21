@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+@layer components {
+  .map {
+    &-continer {
+      @apply flex-1;
+    }
+  }
+}

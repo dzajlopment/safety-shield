@@ -1,5 +1,11 @@
+import MapScreen from "./components/Map/MapScreen";
+
 const App = () => {
-  return <h1 className="text-xl">Hello world!</h1>;
+  return (
+    <>
+      <MapScreen />
+    </>
+  );
 };
 
 export default App;
