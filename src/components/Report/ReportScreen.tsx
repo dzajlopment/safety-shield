@@ -1,11 +1,11 @@
 import { FormEvent, useState } from "react";
-import { Place } from "../../models/Place";
 import "./report-screen.scss";
 import CloseIcon from "../../assets/close_FILL0_wght400_GRAD0_opsz48.svg";
 import { Report } from "../../models/Report";
+import { TPoint } from "../../types/TPoint";
 
 export type ReportScreenProps = {
-  place: Place;
+  place: TPoint;
   distanceInMeters: number;
   onCancel?: () => {};
   onSubmit?: (report: Omit<Report, "id">) => {};

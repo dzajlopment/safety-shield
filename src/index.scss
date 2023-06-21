@@ -19,10 +19,35 @@ body {
   margin: 0;
 }
 
-// @layer components {
-//   .map {
-//     &-continer {
-//       @apply flex-1;
-//     }
-//   }
-// }
+@layer components {
+  .modal {
+    @apply bg-red-50 pb-6 rounded-3xl fixed;
+
+    z-index: 1000;
+    animation: slide-down 300ms ease-out forwards;
+
+    &__top {
+      @apply bg-red-50 py-7 rounded-t-xl font-bold text-4xl flex justify-between mb-6 px-10 items-center;
+    }
+
+    &__close {
+      &:hover {
+        color: darken(rgb(179 179 179), 10);
+        cursor: pointer;
+      }
+    }
+
+    &__content {
+      @apply px-10 py-3;
+    }
+  }
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+}

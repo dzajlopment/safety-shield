@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { MapContainer as Map, TileLayer } from "react-leaflet";
 import MapPoints from "./MapPoints";
 import { TPoint } from "../../types/TPoint";
